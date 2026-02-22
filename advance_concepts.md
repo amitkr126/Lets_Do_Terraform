@@ -96,3 +96,5 @@
         #   Address Space       # Defines the large range (e.g. /16)	  #  Defines a small range (e.g. /24)	#    No IP range (just rules)
         #   Hierarchy	        # Top level	                              #  Lives inside a VNet	            #        Attached to a Subnet or NIC
         ############################################################################################################################################
+
+## https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/resources/management_lock#example-usage-resource-level-lock
