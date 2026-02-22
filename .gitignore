@@ -52,3 +52,14 @@ CodeCoverage/
 *.VisualState.xml
 TestResult.xml
 nunit-*.xml
+main.tfplan
+terraform.exe
+terraform.tfstate
+.terraform.lock.hcl
+.terraform/providers/registry.terraform.io/hashicorp/azurerm/4.61.0/windows_386/LICENSE.txt
+.terraform/providers/registry.terraform.io/hashicorp/azurerm/4.61.0/windows_386/terraform-provider-azurerm_v4.61.0_x5.exe
+main_rg_storage_cont_blob_backup1.txt
+terraform.tfstate.backup
+provider.tf
+local.tf
+main.tf
