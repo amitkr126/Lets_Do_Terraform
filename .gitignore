@@ -63,3 +63,5 @@ terraform.tfstate.backup
 provider.tf
 local.tf
 main.tf
+.terraform/providers/registry.terraform.io/hashicorp/random/3.8.1/windows_386/LICENSE.txt
+.terraform/providers/registry.terraform.io/hashicorp/random/3.8.1/windows_386/terraform-provider-random_v3.8.1_x5.exe
