@@ -24,6 +24,17 @@
     Step 2. Extract the zip file downloaded and then simply put it in C:\terraform folder, create folder if not exist in c drive
     Step 3. Get the system environment path modified so that simple command run like terraform --v
 
+# If we are using azure and we already have subscription then we need these details for sure
+##  client_id, client_secret, tenant_id, subscription_id
+### Client Id and Client Secret can be created by going to Azure Portal & then search for Microsoft Entra Id, and then Manage --> App registration  --> New Registration --> Give the Desired Name --> Click Register
+### SPN --> Manage --> Certificate & Secrets --> Client Secret --> New Client Secret --> Add --> Copy Value and store it somewhere safe
+
+## Refer Terraform documentation
+    https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs
+    https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs/resources/resource_group
 
 
+        terraform init
+        terraform plan -out main.tfplan
+        terraform apply
 
