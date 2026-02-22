@@ -73,3 +73,15 @@
           account_tier             = "Standard"
           account_replication_type = "LRS"
         }
+
+# Debug the terraform file
+
+    $env:TF_LOG="DEBUG"
+
+    $env:TF_LOG_PATH="C:\terraform\logs\terraform.log"
+
+## We use this files to track all the activity of terraform as log files will be generated
+
+        resource "random_uuid" "deployment_id" {
+          for_each = var.infrastructure_configs
+        }
