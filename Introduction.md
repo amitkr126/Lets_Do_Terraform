@@ -38,3 +38,76 @@
         terraform plan -out main.tfplan
         terraform apply
 
+
+
+            resource "azurerm_resource_group" "rgdetails" {
+              name     = "rg-tutorial"
+              location = "Australia East"
+            }
+
+            resource "azurerm_storage_account" "storagedetails" {
+              name                     = "storagetutorialtrform2222026"
+              resource_group_name      = azurerm_resource_group.rgdetails.name
+              location                 = azurerm_resource_group.rgdetails.location
+              account_tier             = "Standard"
+              account_replication_type = "LRS"
+              account_kind = "StorageV2"
+            }
+
+            resource "azurerm_storage_container" "storagecontainer" {
+              name                  = "data"
+              storage_account_id    = azurerm_storage_account.storagedetails.id
+              container_access_type = "blob"
+            }
+
+            resource "azurerm_storage_blob" "storageblob" {
+              name                   = "readme.txt"
+              storage_account_name   = azurerm_storage_account.storagedetails.name
+              storage_container_name = azurerm_storage_container.storagecontainer.name
+              type                   = "Block"
+              source                 = "README.md"
+            }
+
+# Be Cautious, Destroy command will simply delete every thing in one shot
+terraform destroy
+### Always delete resources with terraform when it is cteated by terraform to make sure it is not giving any issue while recreating
+
+    All the work we have done till now is without dependency, now we must declare the dependency, it has to be there to make sure terraform know the exact dependecy of the resource sequence
+
+
+            resource "azurerm_resource_group" "rgdetails" {
+              name     = "rg-tutorial"
+              location = "Australia East"
+            }
+
+            resource "azurerm_storage_account" "storagedetails" {
+              name                     = "strgtutorialtrform2026"
+              resource_group_name      = azurerm_resource_group.rgdetails.name
+              location                 = azurerm_resource_group.rgdetails.location
+              account_tier             = "Standard"
+              account_replication_type = "LRS"
+              account_kind = "StorageV2"
+
+              depends_on = [ azurerm_resource_group.rgdetails ]
+            }
+
+            resource "azurerm_storage_container" "storagecontainer" {
+              name                  = "data"
+              storage_account_id    = azurerm_storage_account.storagedetails.id
+              container_access_type = "blob"
+
+              depends_on = [ azurerm_storage_account.storagedetails ]
+            }
+
+            resource "azurerm_storage_blob" "storageblob" {
+              name                   = "readme.txt"
+              storage_account_name   = azurerm_storage_account.storagedetails.name
+              storage_container_name = azurerm_storage_container.storagecontainer.name
+              type                   = "Block"
+              source                 = "README.md"
+
+              depends_on = [ azurerm_storage_container.storagecontainer ]
+            }
+
+
+Not refer the next steps or tutorial in tutorial1.md
