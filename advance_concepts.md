@@ -87,3 +87,12 @@
         }
 
 ### We can also create a module for keeping multiple files in these folder which are modules
+
+
+        #   Feature	            ###Virtual Network (VNet)	                    ### Subnet	                     ###Network Security Group (NSG)
+        ############################################################################################################################################
+        #   Role	            # Container / Network Boundary	          #  Segmentation / Organization	    #        Firewall / Traffic Filter
+        #   Analogy	            # The House Foundation/Fence	          #  The Rooms inside the house	        #    The Locks on the doors
+        #   Address Space       # Defines the large range (e.g. /16)	  #  Defines a small range (e.g. /24)	#    No IP range (just rules)
+        #   Hierarchy	        # Top level	                              #  Lives inside a VNet	            #        Attached to a Subnet or NIC
+        ############################################################################################################################################
