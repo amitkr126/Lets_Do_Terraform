@@ -1,4 +1,4 @@
-# Terraform is also like general progeamming language where we can have many logics like loop to ease out complexity
+# Terraform is also like general progeamming language for infrastructure as code (IaC) where we can have many logics like loop to ease out complexity
         terraform init -upgrade
 
 ## HCL is awesome for all the providers and it has an awesome tutorials, however we can learn things only by doing it and practicing it well
