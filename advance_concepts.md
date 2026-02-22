@@ -85,3 +85,5 @@
         resource "random_uuid" "deployment_id" {
           for_each = var.infrastructure_configs
         }
+
+### We can also create a module for keeping multiple files in these folder which are modules
