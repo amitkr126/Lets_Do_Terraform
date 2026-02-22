@@ -89,7 +89,7 @@
 ### We can also create a module for keeping multiple files in these folder which are modules
 
 
-        #   Feature	            ###Virtual Network (VNet)	                    ### Subnet	                     ###Network Security Group (NSG)
+        #   Feature	            ## Virtual Network (VNet)	                    ## Subnet	                     ## Network Security Group (NSG)
         ############################################################################################################################################
         #   Role	            # Container / Network Boundary	          #  Segmentation / Organization	    #        Firewall / Traffic Filter
         #   Analogy	            # The House Foundation/Fence	          #  The Rooms inside the house	        #    The Locks on the doors
