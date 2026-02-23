@@ -10,6 +10,7 @@
         terraform plan -out main.tfplan
         terraform apply  or terraform apply main.tfplan
         terraform destroy
+        terraform validate
 
 ## Virtual Network creation and Sunet Creation
          terraform {
