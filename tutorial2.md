@@ -1,4 +1,4 @@
-# Terraform Tutorial 1 - The Optimization - Creation of VM as well
+# Terraform Azure Tutorial 2 - The Optimization - Creation of VM as well
 
 ## Refer Terraform documentation
     https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs
