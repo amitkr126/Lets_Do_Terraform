@@ -1,4 +1,4 @@
-# Terraform
+# Terraform with Azure(Microsoft)
 ### Terraform is in huge demand these days and it is basically in demand because an enterprize want to avoid
  Hire Multiple talent for each cloud provider
  Want to keep things simple and sharable
@@ -38,7 +38,24 @@
         terraform plan -out main.tfplan
         terraform apply
 
+                 terraform {
+           required_providers {
+             azurerm = {
+               source = "hashicorp/azurerm"
+               version = "4.61.0"
+             }
+           }
+         }
 
+          provider "azurerm" {
+              features {}
+      
+              client_id       = "d43e93a0-xxx-xxxx-xxxx-xxxxxxx"
+              client_secret   = "qgB8Q~xxxxxxxx.xxxxxxx-xxxxxxx"
+              tenant_id       = "87e219e4-xxxx-xxxx-xxxx-xxxxxxxxx"
+              subscription_id = "81a16583-xxxx-xxxx-xxxxx-xxxxxx"
+      
+          }
 
             resource "azurerm_resource_group" "rgdetails" {
               name     = "rg-tutorial"
