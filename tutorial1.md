@@ -1,4 +1,4 @@
-# Terraform Tutorial 1 - THe Next Step
+# Terraform Tutorial 1 - The Next Step
 
 ## Refer Terraform documentation
     https://registry.terraform.io/providers/hashicorp/azurerm/latest/docs
@@ -20,6 +20,16 @@
             }
           }
         }
+
+      provider "azurerm" {
+          features {}
+  
+          client_id       = "d43e93a0-xxx-xxxx-xxxx-xxxxxxx"
+          client_secret   = "qgB8Q~xxxxxxxx.xxxxxxx-xxxxxxx"
+          tenant_id       = "87e219e4-xxxx-xxxx-xxxx-xxxxxxxxx"
+          subscription_id = "81a16583-xxxx-xxxx-xxxxx-xxxxxx"
+  
+      }
 
         locals {
             resource_group_name  = "rg-secured"
